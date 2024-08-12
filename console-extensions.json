@@ -1,0 +1,89 @@
+[
+  {
+    "type": "console.navigation/section",
+    "properties": {
+      "id": "cnf-cert-section",
+      "insertAfter": "builds",
+      "perspective": "admin",
+      "name": "Cnf Certification Suites"
+    }
+  },
+  {
+    "properties": {
+      "dataAttributes": {
+        "data-quickstart-id": "qs-nav-templates",
+        "data-test-id": "templates-nav-item"
+      },
+      "id": "cnfCertificationSuiteRuns",
+      "model": {
+        "group": "cnf-certifications.redhat.com",
+        "kind": "CnfCertificationSuiteRun",
+        "version": "v1alpha1"
+      },
+      "name": "%plugin__cnf-certsuite-plugin~Cnf Certification Suite CRs%",
+      "section": "cnf-cert-section"
+    },
+    "type": "console.navigation/resource-ns"
+  },
+  {
+    "properties": {
+      "component": {
+        "$codeRef": "CnfCertsuiteRunPage"
+      },
+      "model": {
+        "group": "cnf-certifications.redhat.com",
+        "kind": "CnfCertificationSuiteRun",
+        "version": "v1alpha1"
+      }
+    },
+    "type": "console.page/resource/list"
+  },
+  {
+    "type": "console.tab/horizontalNav",
+    "properties": {
+      "model": {
+        "group": "cnf-certifications.redhat.com",
+        "kind": "CnfCertificationSuiteRun",
+        "version": "v1alpha1"
+      },
+      "page": {
+        "name": "Results",
+        "href": "results"
+      },
+      "component": { "$codeRef": "ResultsPage" }
+    }
+  },  
+  {
+    "properties": {
+      "dataAttributes": {
+        "data-quickstart-id": "qs-nav-templates",
+        "data-test-id": "templates-nav-item"
+      },
+      "id": "secrets",
+      "model": {
+        "kind": "Secret",
+        "version": "v1"
+      },
+      "name": "%plugin__cnf-certsuite-plugin~Secrets%",
+      "section": "cnf-cert-section"
+    },
+    "type": "console.navigation/resource-ns"
+  }
+  ,  
+  {
+    "properties": {
+      "dataAttributes": {
+        "data-quickstart-id": "qs-nav-templates",
+        "data-test-id": "templates-nav-item"
+      },
+      "id": "configMaps",
+      "model": {
+        "kind": "ConfigMap",
+        "version": "v1"
+      },
+      "name": "%plugin__cnf-certsuite-plugin~ConfigMap%",
+      "section": "cnf-cert-section"
+    },
+    "type": "console.navigation/resource-ns"
+  }
+]
